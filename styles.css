@@ -1,0 +1,270 @@
+@font-face {
+    font-family: 'stint_ultra_condensedregular';
+    src: url('fonts/stintultracondensed-regular-webfont.woff2') format('woff2'),
+         url('fonts/stintultracondensed-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    /*I will be using this font for my headers, navigation and footer
+    font-family: stint_ultra_condensedregular, cursive; */
+}
+@font-face {
+    font-family: 'ryeregular';
+    src: url('fonts/rye-regular-webfont.woff2') format('woff2'),
+         url('fonts/rye-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    /*I will be using this font for my mainContent headers
+    font-family: ryeregular; */
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /*Telling the browser not to do anything I don't want it to*/
+    background-color: black;
+    font-family: stint_ultra_condensedregular, cursive;
+    font-size: 16px;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    /*In CSS rem stands for “root em”, a unit of measurement that represents the font size of the root element. This means that 1rem equals the font size of the html element, which for most browsers has a default value of 16px. Using rem can help ensure consistency of font size and spacing throughout your UI.*/
+}
+
+#container {
+    width:100%;
+    max-width: 1200px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(grunge-vintage-old-paper-background-dark.jpg);
+    position: relative;
+    /*I must set my container as relative, so that anything I position:absolute later will be positioned relative to my container box, not my body (default). */
+}
+
+#header {
+    color: black;
+    height: auto;
+}
+
+#headBanner {
+    height: 80px;
+    width: auto;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    border: 1px solid green;
+}
+
+#title {
+    height: 60px;
+    display: inline-block;
+    padding-top: 20px;
+    padding-left: 50px;
+    position: absolute;
+    border: 1px solid RED;
+}
+
+#hours {
+    border: 1px solid purple;
+    height: 80px;
+    width: 200px;
+    display:inline-block;
+    position: absolute;
+    right:270px;
+    /*This is the 220px of my callUs box and it's 50px paddingright*/
+}
+
+#hours p {
+    padding-left:60px;
+    /*my background image is 50px*/
+    padding-bottom: 12px;
+    background-image:url(clock50.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    /*The image is placed as a background image and to the left and top of the box containing my p tags so it is in line with my text*/
+}
+
+#callUs {
+    border: 1px solid blue;
+    height: 80px;
+    width: 220px;
+    display:inline-block;
+    position: absolute;
+    right: 0px;
+    padding-right: 50px;
+    /*position absolute allows me to align elements left and right
+    Here my element is 50 px off the right side of my content*/
+}
+
+#callUs p {
+    padding-left:60px;
+    padding-bottom: 12px;
+    background-image:url(phone50.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+#navBanner {
+    height: 30px;
+    min-width: 800px;
+    text-align: left;
+    word-spacing: 50px;
+    margin: 0 auto;
+    padding: 20px 50px 10px;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: rgba(130, 90, 40, 0.5);
+    /*To make the background color partly transparent, keeping the text and other elements fully opaque, use a color value which has an alpha channel—such as rgba. A value of 1 for the alpha channel value makes the color fully opaque. Therefore background-color: rgba(0,0,0,.5); will set the background color to 50% opacity.*/
+    
+}
+
+#navBanner a {
+    text-decoration: none;
+    color:black;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 3px 0.5em;
+}
+
+#navBanner a:hover {
+    color:saddlebrown;
+    background-color: white;
+    border-radius: 10px;
+    padding: 6px 0.5em;
+}
+
+#main {
+    height: 600px;
+    width: 100%;
+    border: 1px solid yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*centers the content (divs) inside my #main div*/
+}
+
+#mainContent {
+    height: 450px;
+    width: 400px;
+    min-width: 400px;
+    text-align: center;
+    color: black;
+    text-shadow: 2px 1px 5px rgba(90, 45, 10, 0.8);
+    /*2px horizontal 1px vertical 5px blur
+    rgba color with 80% opacity*/
+    position: relative;
+    margin: 30px 10px;
+    padding:10px;
+    border: 1px solid black;
+    font-family: ryeregular;
+}
+
+#mainContent h1 {
+    font-size: 3rem;
+    margin: 80px auto 0px;
+    /*three values means the first is the top, the second is both left and right, and the third is the bottom
+    we want 0 margin on the bottom so the next line of text is as close as possible and we can change the top margin if needed in the h2 element*/
+}
+
+#mainContent h2 {
+    font-size: 1.5rem;
+    margin: 20px auto 100px;
+}
+
+a.button {
+    /*This is the text in my button*/
+    text-transform: uppercase;
+    background-color:saddlebrown;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+
+    /*This is the shape of my button*/
+    padding: 15px 20px; 
+    border-radius: 20px;
+    width: fit-content;
+    border: 2px solid black;
+    margin: 0px auto 0px;
+}
+
+#mainImage {
+    border: 1px solid black;
+    margin: 30px 10px;
+    padding:10px;
+}
+
+#subMain {
+    padding: 20px 80px;
+    font-weight: bold;
+    font-size: 1.3rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#subMain h3 {
+    font-family: stint_ultra_condensedregular, cursive;
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+#subMain a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+/* ------- NOT WORKING ---------- */
+#subMain a:hover{
+    transform: scale(1.1, 1.1);
+    /*Scale my entire text larger when hovering*/
+}
+
+#menu ul {
+    list-style-type: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+}
+
+#footer {
+    height: 130px;
+    width: 1200px;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: rgba(130, 90, 40, 0.5);
+    text-align: center;
+    color: black;
+    font-size: 1rem;
+}
+
+#footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#footer ul li a {
+    display: inline;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px;
+    /*padding between my links*/
+    color: black;
+}
+
+#footer img {
+    height: 20px;
+    width: auto;
+}
+
+#footer p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
